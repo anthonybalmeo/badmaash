@@ -1,0 +1,307 @@
+// 768px
+@include mobilefirst($big-break) {
+	
+	.video-link {
+  		display: block;
+	}
+
+	video#bgvid {
+		display: block;
+	}
+
+	.video-link.active {
+	  display: none;
+}
+/************************
+| HEADER
+************************/
+
+	header { 
+		height: 110px; 
+		top: 0;
+		.full-menu {
+			position: relative;
+			display: block;
+			height: 100%;
+			width: 100%;
+			.span9, .span3  {
+				height: 100%;
+				
+				color: $black;
+				a { 
+					text-align: center;
+					color: $black;
+					text-decoration: none;
+					font-size: 18px;
+					text-transform: uppercase;
+					letter-spacing: 0.12em;
+					cursor: pointer;
+				}
+				img {
+					width: 230px;
+				}
+				.menu-container {
+					position: relative;
+					text-align: left;
+					top: 50%;
+					transform: translate(0, -50%);
+					-webkit-transform: translate(0, -50%);					
+					-moz-transform: translate (0, -50%);
+				}
+			}			
+			.span3 {
+				.menu-container {
+					text-align: left;
+				}
+			}
+			.span9{
+				.menu-contain{
+					height: 100%;
+					.span2, .span3, .span4, .span1 {
+						-webkit-transition: background 0.2s ease-in-out;
+				      	-moz-transition: background 0.2s ease-in-out;
+				      	transition: background 0.2s ease-in-out;
+				      	height: 100%;
+						.menu-container {
+							text-align: center;
+						}
+					}
+					.span2.active, .span3.active, .span4.active, .span1.active {
+						background: rgba(0,0,0,0.6);
+						.menu-container {
+							a {
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		nav {
+			height: 110px;
+			#logo-div {
+				display: none;
+				margin: 0;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate (-50%, -50%);
+				.logo {
+					width: 100%;
+					max-width: 210px;
+				}
+			}
+			#hamburger {
+				display: none;
+			}
+		}
+	}
+	header.active {
+		top: 0;
+		height: 110px;
+		nav {
+			height: 110px;
+		}
+	}
+
+/************************
+| CONTENT
+************************/
+
+	#main{
+		background: none ;
+	}
+
+		.content {
+			top: 0;
+			padding-top: 0px;
+			height: 100%;
+
+			.social-share {
+				text-align: left;
+				top: 130px;
+			}
+			#main-section {
+		    	position: absolute;
+		    	width: 100%; 		    	
+
+				h2 {
+					font-size: 42px;
+					letter-spacing: 0.12em;
+					color: $white;
+				}
+				.span7 {
+					margin-left: 0; 
+					.featured {
+						height: 375px; 
+						img {
+							height: 375px;
+						}
+					}
+				}
+				.span5 {
+					margin-left: 0;
+					height: 375px;
+			        #instafeed {
+			          position: relative;
+			          width: 100%;
+			         
+			          a {
+
+			            position: relative;
+			            display: inline-block;
+			            margin: 0px 7px 15px;
+
+			            img {}
+			          }
+			        }
+			      }
+		    }		   
+
+		}
+		.pages.about {
+			margin-top: 160px;
+		}
+		.pages {	
+			margin-top: 45px;	    		    	
+
+			h2 {
+				font-size: 62px;
+			}
+
+			.info {
+				
+				.span12 {
+					
+				}
+				.span7 {
+					
+				}
+				.span5 {
+					
+				}
+			}
+			.press {
+				
+				.span4 {
+					.press-container {
+						
+						img {
+
+						}
+						.description {
+							
+						}
+					}
+				}
+			}    
+		}
+
+	
+
+
+/************************
+| ABOUT US
+************************/
+.about {
+	.slider-img {          
+      height: 400px !important;     
+    }
+}
+/************************
+| FOOD MENU
+************************/
+.food-menu {
+	.span6 {
+		.food {
+			.slider-img {
+				height: 260px;
+			}
+		}
+	}
+}
+/************************
+| PRESS
+************************/
+.press {
+	.span4 {
+		.press-container {
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+	}	
+}
+/************************
+| CONTACT US
+************************/
+.contact {
+	.span7 {
+		margin-bottom: 0;
+		p {
+			
+		}
+		form {
+			.span12 {
+				
+				input, textarea {
+					
+
+				}
+				.social {
+		         
+		          margin-left: 15px;
+		          margin-right: 15px;
+		          a {
+		            color: $white;
+		            height: 30px;
+		            width: 30px;
+		            background: $bad-dark-teal;
+		            border-radius: 30px;
+		            display: inline-block;
+		            margin: 0 10px;
+		            text-align: center;
+		            line-height: 30px;
+		            font-size: 15px;
+		            cursor: pointer;
+		            @include transition-background(0.3s);
+		            &:hover {
+		              background: $bad-light-teal;
+		            }
+		            i {
+		              color: $white;
+		              font-size: 15px;
+		            }
+		          }
+		        }	
+			}
+		}
+	}
+	.span5 {
+		
+		
+	}
+}
+
+.reservation {
+  .span12 {
+   
+    h2 {
+      font-size: 62px;      
+    }
+    p {
+    	font-size: 18px;
+    }
+    a {
+	  font-size: 18px;
+      padding: 10px 30px;
+      border-radius: 2px;
+      
+    }
+  }
+}
+
+}

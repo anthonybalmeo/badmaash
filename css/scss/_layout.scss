@@ -1,0 +1,31 @@
+// Main layout styles go here
+body, html {
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	font-family: 'Cabin-Regular' !important; 
+  
+}
+
+.overlay{
+
+	background: rgba(0,0,0,0.5);
+	  min-width: 100%;
+	  min-height: 100%;
+	  width: auto;
+	  height: auto;
+}
+
+// Responsive styles if needed
+// @include responsive($big-break) {
+// }
+// @include responsive($smasll-break) {
+// }
+
+// Mobile first styles if needed
+// @include mobilefirst($big-break) {
+// }
+// @include mobilefirst($small-break) {
+// }

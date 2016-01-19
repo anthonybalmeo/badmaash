@@ -1,0 +1,89 @@
+.featured-food {
+	width: 100%;
+	height: 100%;
+	max-height: 350px;
+	position: relative;
+	overflow: hidden;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	img {
+		display: block;
+		width: 100%;
+
+	}
+}
+
+.food-menu {
+	width: 100%;
+    position: relative;
+    @include clearfix;
+    .span6 {
+    	.food {
+            border: solid 3px rgba(255,255,255,0.9);
+            border-radius: 0;
+            .slider-img {
+                height: 180px;
+                border-radius: 0;
+            }
+            .one {
+                background: url(../img/food-menu/food-1.jpg) no-repeat center;
+                background-size: 100% auto;
+            }
+            .two {
+                background: url(../img/food-menu/food-2.jpg) no-repeat center;
+                background-size: 100% auto;
+            }
+            .three {
+                background: url(../img/food-menu/food-3.jpg) no-repeat center;
+                background-size: 100% auto;
+            }
+        }
+    	.menu-list {
+    		@include clearfix;
+    		.span6 {
+    			height: 154px;
+    			background: rgba(0,0,0,0.5);
+    		}
+    	}
+    }
+    .span12 {
+    	margin: 30px 0 0 0;
+    	widows: 100%;
+        .span6 {
+            .menu-blocks {
+                width: 100%;
+                height: 150px;
+                background: $black;
+                position: relative;
+                cursor: pointer;
+                border: solid 3px rgba(255,255,255,0.9);
+                @include border-radius(0px);
+                @include transition(all, 0.15s, ease-in-out);
+                box-shadow: 0px 6px 15px rgba(0,0,0,0.5);
+                .title {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    @include transform(translate(-50%, -50%));
+                    @include transition(font-size, 0.1s, ease-in-out);
+                    font-family: 'Raleway', sans-serif;
+                    color: $white;
+                    font-size: 1.75rem;
+                    font-weight: 400;
+                    letter-spacing: 0.2rem;
+                    text-shadow: 0px 2px 4px #000000;
+                    text-transform: uppercase;
+                }
+            }
+            .menu-blocks:hover {
+                border: solid 3px $bad-pink;
+                .title {
+                    font-size: 1.85rem;
+                }
+            }
+            .dinner{ background: url(../img/dinner.jpg) no-repeat; background-size: cover; background-position: center; }
+            .drinks{ background: url(../img/drinks.jpg) no-repeat; background-size: cover; background-position: center; }
+        }
+    }
+
+}

@@ -1,0 +1,60 @@
+.press {
+	color: $black;
+	width: 100%;
+    position: relative;	
+	@include border-radius(5px);
+	padding: 20px;
+	background: rgba(255,255,255,0.9);
+	.press-row {
+		@include clearfix;
+
+		margin-bottom: 20px;
+		.span4 {
+			margin-left: 1.06%;
+			margin-right: 1.06%;
+			.press-container {			
+				width: 100%;	
+				height: auto;
+				overflow: hidden;	
+				position: relative;	
+				.image {
+					position: relative;
+					width: 100%;					
+					img { display: block; }
+				}
+				.description {
+					position: absolute;
+					width: 100%;
+					background: rgba(0,0,0,0.75);
+					bottom: 0px;					
+					padding: 10px 5px;
+					font-size: 14px;
+					color: $white;
+					@include transition-all(0.2s);
+	            }
+			}
+			.press-container:hover {
+				.description { background: rgba(179, 67, 122, 0.90);}
+			}
+		}
+	}
+	.more-press {			
+			color: $black;
+			.span4 {
+				margin-bottom: 0;
+				ul { 
+					margin: 0;
+					li {
+						text-align: left;
+						a {
+							color: $black;
+							text-decoration: none;
+						}
+						a:hover {
+							color: $bad-pink;
+						}
+					}
+				}
+			}	
+		}
+}

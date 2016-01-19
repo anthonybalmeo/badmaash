@@ -1,0 +1,64 @@
+<nav >	
+	<div id="logo-div">
+	<a ng-click="checkNav(''); setHeaderActive(false)"><img class="logo" src="img/logo-3.png" /></a>
+	<!-- <div class="logo" data-0="width:100%;" data-top-top="width:20%; " data-edge-strategy="set"></div> -->
+	</div>
+
+
+	<div class="container full-menu">
+		<div class="span3"><div class="menu-container"><a ng-click="checkNav(''); setHeaderActive(0)"><img class="logo" src="img/logo-2.png"/></a></div></div>
+		<div class="span9">
+			<div class="menu-contain">
+				<div class="span2"  ng-click=" checkNav('about-us'); setHeaderActive(1); scrollto('about');" ng-class="{active : headerVal == 1 }">
+					<div class="menu-container"><a >About Us</a></div>
+				</div>
+				<div class="span2" ng-click="checkNav('menu'); scrollto('menu-food'); setHeaderActive(2);" ng-class="{active : headerVal == 2 }" >
+					<div class="menu-container"><a>Menu</a></div>
+				</div>		
+				
+				<div class="span2" ng-click="checkNav('press'); scrollto('press'); setHeaderActive(3);" ng-class="{active : headerVal == 3 }">
+					<div class="menu-container"><a>Press</a></div>
+				</div>
+				<div class="span2" ng-click="checkNav('info'); scrollto('info'); setHeaderActive(4)" ng-class="{active : headerVal == 4 }">
+					<div class="menu-container"><a>Info</a></div>
+				</div>
+				<div class="span3" ng-click="checkNav('reservation'); scrollto('info'); setHeaderActive(5)" ng-class="{active : headerVal == 5 }">
+					<div class="menu-container"><a>Reservation</a></div>
+				</div>
+			</div>
+			<!-- <div class="menu-contain">
+				<div class="span2"  ng-click="checkNav('about-us'); setHeaderActive(true);" ng-class="{active : navigationLink == 'about-us'}">
+					<div class="menu-container"><a >About Us</a></div>
+				</div>
+				<div class="span2" ng-click="checkNav('menu'); setHeaderActive(true);" ng-class="{active : navigationLink == 'menu'}" >
+					<div class="menu-container"><a>Menu</a></div>
+				</div>		
+				
+				<div class="span2" ng-click="checkNav('press'); setHeaderActive(true)" ng-class="{active : navigationLink == 'press'}">
+					<div class="menu-container"><a>Press</a></div>
+				</div>
+				<div class="span2" ng-click="checkNav('contact'); setHeaderActive(true)" ng-class="{active : navigationLink == 'contact'}">
+					<div class="menu-container"><a>Info</a></div>
+				</div>
+				<div class="span3" ng-click="checkNav('reservation'); setHeaderActive(true)" ng-class="{active : navigationLink == 'reservation'}">
+					<div class="menu-container"><a>Reservation</a></div>
+				</div>
+			</div> -->
+		</div>
+	</div>
+
+	<div id="hamburger" ng-click="toggleMenu()">
+		<svg version="1.1" id="hamburger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25.996px" height="20px" viewBox="0 0 25.996 20" enable-background="new 0 0 25.996 20" xml:space="preserve">
+			<g>	
+				<line fill="none" stroke="#b3437a" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="24.496" y1="2.487" x2="1.5" y2="2.487"></line>
+			
+				<line fill="none" stroke="#b3437a" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="24.496" y1="10.494" x2="1.5" y2="10.494"></line>
+			
+				<line fill="none" stroke="#b3437a" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="24.496" y1="18.5" x2="1.5" y2="18.5"></line>
+			</g>
+		</svg>		
+	</div>
+	<div class="caret">
+	<i class="fa fa-arrow-up" ng-click="scrollTop()"></i>
+	</div>
+</nav>

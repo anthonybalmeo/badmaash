@@ -1,0 +1,83 @@
+<div class="content pages">
+	<h2>Menu</h2>
+
+	<div class="featured-food">
+		<img src="img/background/bg-0.jpg"/>
+	</div>
+
+	<div class="food-menu">
+		<div class="food-menu-row">
+			<div class="span4">
+				<h3>Bombay Street Cart</h3>
+				<div class="food-divider open">
+					<div class="food-type" ng-repeat="food in bombay">
+						<p class="title">{{food.name}}</p>
+						<p class="description">{{food.description}}</p>					
+					</div>
+				</div>
+
+				<h3>Samosas</h3>
+				<div class="food-divider open">
+					<p class="food-description">Homemade Punjami Samosas are triangular short-dough pastries stuffed with indian goodness. <span>By the pair, perfect to share.</span></p>
+					<div class="food-type" ng-repeat="food in samosas">
+						<p class="title">{{food.name}}</p>
+						<p class="description">{{food.description}}</p>					
+					</div>
+				</div>
+			</div>
+			<div class="span4">
+				<h3>Tandoori Clay Oven</h3>
+				<div class="food-divider open">
+					<div class="food-type" ng-repeat="food in tandoori">
+						<p class="title">{{food.name}}</p>
+						<p class="description">{{food.description}}</p>					
+					</div>
+				</div>
+				<h3>Indian Condiments</h3>
+				<div class="food-divider open">
+					<div class="food-type no-margin-bottom" ng-repeat="food in condiments">
+						<p class="title">{{food.name}}</p>					
+					</div>
+				</div>
+
+			</div>
+			<div class="span4">
+				<h3>#FoodPorn</h3>
+				<div class="food-divider open">
+					<div class="food-type" ng-repeat="food in foodPorn">
+						<p class="title">{{food.name}}</p>
+						<p class="description">{{food.description}}</p>					
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="span12">
+				<h3>Traditional Indian</h3>
+				<div class="food-divider open">
+					<div class="span4">
+					<div class="food-type" ng-repeat="food in traditional | limitTo: 3 ">
+						<p class="title">{{food.name}}</p>
+						<p class="description">{{food.description}}</p>					
+					</div>
+					</div>
+					<div class="span4">
+					<div class="food-type" ng-repeat="food in traditional | limitTo: 6 | limitTo: -3 ">
+						<p class="title">{{food.name}}</p>
+						<p class="description">{{food.description}}</p>					
+					</div>
+					</div>
+					<div class="span4">
+					<div class="food-type no-margin-bottom" ng-repeat="food in traditional | limitTo: 9 | limitTo: -3">
+						<p class="title">{{food.name}}</p>
+						<p class="description">{{food.description}}</p>					
+					</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		
+	</div>
+</div>

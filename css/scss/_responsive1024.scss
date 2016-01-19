@@ -1,0 +1,82 @@
+// 1024px
+@include mobilefirst($desktop) {
+
+/************************
+| HEADER
+************************/
+
+	header { 
+		height: 110px; 
+		nav {
+			#logo-div {
+				.logo {
+					width: 100%;
+				}
+			}
+			#hamburger {
+				display: none;
+			}
+		}
+	}
+
+
+
+
+
+
+// video#bgvid {
+//   background-size: cover;
+//   -moz-transform:scale(1);
+//   -webkit-transform:scale(1);
+//   -o-transform:scale(1);
+//   -ms-transform:scale(1);
+//   transform:scale(1);
+// }
+
+
+/************************
+| CONTENT
+************************/
+	#main{
+
+		.content{
+			max-width: 1200px;	
+			#main-section {
+		    	
+		    	width: 100%; 
+		    	max-width: 1200px;           
+		    	margin: 0 auto;
+		    	
+		    }		
+		}
+		.pages {
+			
+		}
+	}
+}
+
+
+/************************
+| ABOUT US
+************************/
+.about {
+
+}
+/************************
+| FOOD MENU
+************************/
+.food-menu {
+	
+}
+/************************
+| PRESS
+************************/
+.press {
+	
+}
+/************************
+| CONTACT US
+************************/
+.contact {
+	
+}

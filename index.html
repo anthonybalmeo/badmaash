@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html ng-app="badmaash" ng-controller="MainCtrl"> <!--<![endif]-->
+<head>
+	<title>BadmaashLA | An Indian-Gastropub in Downtown LA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="Restaurant" content="BadmaashLA">
+	<meta name="Description" content="Badmaash does indian food in a cool-casual way. We serve casual and traditional indian flavors with DTLA swag - with beer, wine, and all that goodstuff! we source local, organic and sustainable as much as we can… but it’s hard to find kala-namak in Cali. Oh, and we have a real chef. like REAL real. Over 40 years in the kitch, with numerous awards and accolades – Chef Pav kicks ass – no more greasy, over-spiced, mystery dish that you cant even pronounce… who eats that trash anyway?">
+	<meta name="About" content="An Indian-Gastropub in Downtown LA">
+	<meta name="Location" content="Downtown Los Angeles">
+	<meta name="Address" content="108 West 2nd Street #104, Los Angeles, CA 90012">
+	<meta name="Telephone" content="(213) 221 - 7466 ">
+	<meta name="keywords" content="Indian, Restaurant, Badmaashla, restaurant, Badmaash, Indian-Gastropub, Downtown LA, Los Angeles, middle-eastern, bar wine, and all that goodstuff! ">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/royalslider.css">
+	<link href="css/fontawesome.css" rel="stylesheet">
+	<link href="css/slick.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:200,400' rel='stylesheet' type='text/css'>
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/lib/jquery-ui.js"></script>
+	<script src="js/lib/royalslider.js"></script>
+	<!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+	<!-- http://demo.yosoftware.com/html/berg/-->
+	<!-- <base href="/" /> -->
+</head>
+<body>
+	<!-- HEADER -->
+	<header header ng-class="{active: active == true}"></header>
+
+	<div class="video-link " ng-class="{active: active == true}">
+		<a href="http://hypebeast.com/2014/7/hypebeast-eats-badmaash-is-not-your-average-indian-restaurant" target="_blank">WATCH THE FULL VIDEO ON &nbsp;&nbsp;<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>
+		<img src="img/hypebeast-logo.png" alt="Hypbeast Logo" class="video-logo" />
+		</a>
+
+	</div>
+
+
+	<!-- MENU -->
+	<div id="sideMenu" home-menu></div>
+
+	<!-- BACKGROUND -->
+	<div id="bg">
+		<video autoplay loop muted poster="img/background/bg-2.jpg" id="bgvid">
+			<source src="badmaash-video.webm" type="video/webm">
+			<source src="badmaash-video.mp4" type="video/mp4">
+		</video>
+		<div class="overlay"></div>
+	</div>
+
+	<!-- VIEW -->
+	<section id="main" ng-class="{homeScreen: atHome }">
+
+		<ng-view></ng-view>
+	</section>
+	<footer footer ng-show="footerShow"></footer>
+
+	<div class="popup" ng-class="{show: hours == true}">
+		<div class="close">
+			<a ng-click="closePopup()"><i class="fa fa-times"></i></a>
+		</div>
+		<div id="menu-info">
+			<table>
+				<tr><td colspan="2" class="meal">Lunch:</td></tr>
+				<tr>
+					<td class="day">Mon-Fri</td>
+					<td class="time">11:30 AM &mdash; 3:00 PM</td>
+				</tr>
+			</table>
+
+			<table>
+				<tr><td colspan="2" class="meal">Dinner:</td></tr>
+				<tr>
+					<td class="day">Monday</td>
+					<td class="time">5:30 PM &mdash; 10:00 PM</td>
+				</tr>
+				<tr>
+					<td class="day">Tuesday</td>
+					<td class="time">5:30 PM &mdash; 10:00 PM</td>
+				</tr>
+				<tr>
+					<td class="day">Wedneday</td>
+					<td class="time">5:30 PM &mdash; 11:00 PM</td>
+				</tr>
+				<tr>
+					<td class="day">Thursday</td>
+					<td class="time">5:30 PM &mdash; 12:00 PM</td>
+				</tr>
+				<tr>
+					<td class="day">Friday</td>
+					<td class="time">5:30 PM &mdash; 12:00 PM</td>
+				</tr>
+				<tr>
+					<td class="day">Saturday</td>
+					<td class="time">5:30 PM &mdash; 12:00 PM</td>
+				</tr>
+				<tr>
+					<td class="day">Sunday</td>
+					<td class="time">5:30 PM &mdash; 10:00 PM</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<script src="js/lib/angular/angular.min.js"></script>
+	<script src="js/lib/angular/angular-route.js"></script>
+	<script src="js/lib/angular/angular-animate.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="js/lib/angular/angular-sanitize.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/directives.js"></script>
+	<script src="js/services/badmaashService.js"></script>
+	<script src="js/lib/fastclick.js"></script>
+	<script src="js/lib/TweenMax.min.js"></script>
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/lib/jquery.gsap.min.js"></script>
+	<script src="js/lib/skrollr.min.js"></script>
+	<script src="js/lib/instafeed.min.js"></script>
+	<script src="js/lib/twitter-feed.js"></script>
+	<script src="js/lib/slick.min.js"></script>
+	<script src="js/email-verify.js"></script>
+	<script>
+	  window.addEventListener('load', function() {
+	      FastClick.attach(document.body);
+	  }, false);
+	</script>
+
+	<script type="text/javascript">
+	  window.onload = function() {
+	    // skrollr.init();
+	    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'badmaashla',
+        clientId: '0efc9a7f04a24440bf48cef9c1c3c034',
+        limit: 4
+    });
+
+feed.run();
+	  }
+
+	  </script>
+
+
+</body>
+</html>

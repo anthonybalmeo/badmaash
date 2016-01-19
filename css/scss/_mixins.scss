@@ -1,0 +1,78 @@
+// Clear after floats
+@mixin clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020"; 
+    display: block; 
+    height: 0; 
+    overflow: hidden; 
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin transition($type, $sec, $transition) {
+  -webkit-transition: $type $sec $transition;
+  -moz-transition: $type $sec $transition;
+  -o-transition: $type $sec $transition;
+  transition: $type $sec $transition;
+}
+
+@mixin transition-all($sec){
+  -webkit-transition: all $sec ease-in-out;
+  -moz-transition: all $sec ease-in-out;
+  -o-transition: all $sec ease-in-out;
+  transition: all $sec ease-in-out;
+}
+
+@mixin transition-background($sec){
+  -webkit-transition: background $sec ease-in-out;
+  -moz-transition: background $sec ease-in-out;
+  -o-transition: background $sec ease-in-out;
+  transition: background $sec ease-in-out;
+}
+
+
+@mixin transition-transform($sec){
+  -webkit-transition: transform $sec ease-in-out;
+  -moz-transition: transform $sec ease-in-out;
+  -o-transition: transform $sec ease-in-out;
+  transition: transform $sec ease-in-out;
+}
+
+@mixin transform($transform){
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Apply clearfix to this classes by default
+.clearfix, .group{
+  @include clearfix;
+}
+
+// Responsive mixins
+@mixin responsive($res)
+{
+  @media screen and (max-width: $res)
+  {
+    @content;
+  }
+}
+
+@mixin mobilefirst($res)
+{
+  @media screen and (min-width: $res)
+  {
+    @content;
+  }
+}
